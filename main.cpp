@@ -10,8 +10,8 @@ int main() {
     // b = static_cast<uint8_t>(a);
     // std::cout << static_cast<uint32_t>(b) << std::endl;
 
-    Set b(27);
-    for(size_t i = 2; i < 27; i++){
+    Set b(55);
+    for(size_t i = 2; i < 55; i++){
         b.InsertElem(i);
     }
     std::vector d = b.GetPrimary();

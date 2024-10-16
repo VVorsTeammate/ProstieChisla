@@ -42,9 +42,12 @@ std::vector<uint64_t> Set::GetPrimary(){
                 tmp._bitField.ClrBit(j);
             }
         }
+        if(tmp._bitField.GetBit(i)){
+            res.push_back(i);
+        }
         i++;
     }
-    for(size_t i = 0; i < n; i++){
+    for(size_t i = static_cast<size_t> (sqrt(n)) + 1; i < n; i++){
         if(tmp._bitField.GetBit(i)){
             res.push_back(i);
         }
